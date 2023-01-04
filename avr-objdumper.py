@@ -4,16 +4,6 @@ from pathlib import Path
 import tkinter as tk
 from tkinter import filedialog
 
-#path_to_avr_objdump = "C:\\Users\\logans\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino7\\bin\\avr-objdump.exe"
-path_to_avr_objdump = ""
-
-#path_to_avr_obj     = "C:\\Users\\logans\\AppData\\Local\\Temp\\arduino-sketch-215C43F6D2ABE25B1AF923ED4CB974B3\\helloAssemblyLanguageUno.ino.hex"
-path_to_avr_obj     = ""
-
-#avr_output_file     = "C:\\Users\\logans\\AppData\\Local\\Temp\\arduino-sketch-215C43F6D2ABE25B1AF923ED4CB974B3\\py_out.txt"
-avr_output_file     = ""
-
-
 def printHelp():
     print("\n ================================================ ")
     print(" ============== AVR-OBJDUMPER HELP ============== ")
@@ -55,12 +45,6 @@ def main(argv):
 
     print("\nStep 2: Select where to store the output file")
     avr_output_file = filedialog.asksaveasfilename(title="Choose where to save output")
-
-
-    # JUST FOR TESTING
-    path_to_avr_obj     = "C:\\Users\\logans\\AppData\\Local\\Temp\\arduino-sketch-215C43F6D2ABE25B1AF923ED4CB974B3\\helloAssemblyLanguageUno.ino.hex"
-    avr_output_file     = "C:\\Users\\logans\\Desktop\\out.txt"
-
 
     obj_file_size = Path(path_to_avr_obj).stat()
     try:
